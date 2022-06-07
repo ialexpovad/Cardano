@@ -22,7 +22,8 @@ SOURCES += \
         src/mainwindow.cpp
 
 HEADERS += \
-        include/mainwindow.h
+        include/mainwindow.h \
+    include/version.h
 
 FORMS += \
         forms/mainwindow.ui
@@ -30,3 +31,5 @@ FORMS += \
 DISTFILES += \
         ../README.md \
         CMakeLists.txt
+RESOURCES +=\
+        res/res.qrc

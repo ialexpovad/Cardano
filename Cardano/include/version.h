@@ -1,6 +1,6 @@
 
 /*****************************************************************************
- * mainwindow.h
+ * version.h
  *
  * Created: 07.06.2022 2022 by Alex Povod
  *
@@ -16,26 +16,23 @@
  * contact the author of this file, or the owner of the project in which
  * this file belongs to.
  *****************************************************************************/
-#ifndef MAINWINDOW_H
-#define MAINWINDOW_H
+#ifndef VERSION_H
+#define VERSION_H
 
-#include <QMainWindow>
-#include <include/version.h>
+#define VER_PRODUCT_MAJOR           0
+#define VER_PRODUCT_MINOR           0
+#define VER_PRODUCT_RELEASE         0
 
-namespace Ui {
-class MainWindow;
-}
+#define VER_COMPANYNAME_STR         "Alex Povod"
+#define VER_PRODUCTNAME_STR         "Cardano" DEBUG_STR
+#define VER_FILEDESCRIPTION_STR     VER_PRODUCTNAME_STR
+#define VER_INTERNALNAME_STR        VER_PRODUCTNAME_STR
+#define VER_LEGALCOPYRIGHT_STR      "Copyright (c) 2022 Alex Povod"
+#define VER_LEGALTRADEMARKS1_STR    "All Rights Reserved"
+#define VER_LEGALTRADEMARKS2_STR    VER_LEGALTRADEMARKS1_STR
+#define VER_ORIGINALFILENAME_STR    "Cardano"
 
-class MainWindow : public QMainWindow
-{
-    Q_OBJECT
+#define VER_COMPANYDOMAIN_STR       "atomtex.com"
 
-public:
-    explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
 
-private:
-    Ui::MainWindow *ui;
-};
-
-#endif // MAINWINDOW_H
+#endif // VERSION_H

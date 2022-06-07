@@ -16,7 +16,7 @@
  * contact the author of this file, or the owner of the project in which
  * this file belongs to.
  *****************************************************************************/
-#include "mainwindow.h"
+#include "../include/mainwindow.h"
 #include "ui_mainwindow.h"
 
 MainWindow::MainWindow(QWidget *parent) :
@@ -24,6 +24,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+    setWindowTitle(VER_ORIGINALFILENAME_STR);
+    setWindowIcon(QIcon (":/img/logo/m_logo.png"));
 }
 
 MainWindow::~MainWindow()
