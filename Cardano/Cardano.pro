@@ -20,7 +20,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 SOURCES += \
         src/main.cpp \
         src/mainwindow.cpp
-
 HEADERS += \
         include/mainwindow.h \
     include/version.h

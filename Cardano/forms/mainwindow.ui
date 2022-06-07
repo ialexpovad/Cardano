@@ -42,7 +42,7 @@
       <x>290</x>
       <y>20</y>
       <width>41</width>
-      <height>101</height>
+      <height>131</height>
      </rect>
     </property>
     <property name="text">
@@ -74,9 +74,9 @@
       </widget>
      </item>
      <item row="0" column="2">
-      <widget class="QPushButton" name="pBtnPlus">
+      <widget class="QPushButton" name="pBtnClear">
        <property name="text">
-        <string>+</string>
+        <string>C</string>
        </property>
       </widget>
      </item>
@@ -95,9 +95,9 @@
       </widget>
      </item>
      <item row="1" column="2">
-      <widget class="QPushButton" name="pBtnMinus">
+      <widget class="QPushButton" name="pBtnPlus">
        <property name="text">
-        <string>-</string>
+        <string>+</string>
        </property>
       </widget>
      </item>
@@ -116,9 +116,9 @@
       </widget>
      </item>
      <item row="2" column="2">
-      <widget class="QPushButton" name="pBtnDot">
+      <widget class="QPushButton" name="pBtnMinus">
        <property name="text">
-        <string>x</string>
+        <string>-</string>
        </property>
       </widget>
      </item>
@@ -130,9 +130,9 @@
       </widget>
      </item>
      <item row="3" column="1">
-      <widget class="QPushButton" name="pBtnCancel">
+      <widget class="QPushButton" name="pBtnDot">
        <property name="text">
-        <string>C</string>
+        <string>x</string>
        </property>
       </widget>
      </item>
@@ -158,28 +158,28 @@
      <item>
       <widget class="QPushButton" name="pbtnNxM">
        <property name="text">
-        <string>n x m</string>
+        <string>N x M</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pbtnNxN">
        <property name="text">
-        <string>n x n</string>
+        <string>N x N</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pBtnNx1">
        <property name="text">
-        <string>n x 1</string>
+        <string>N x 1</string>
        </property>
       </widget>
      </item>
      <item>
       <widget class="QPushButton" name="pBtn1xN">
        <property name="text">
-        <string>1 x n</string>
+        <string>1 x N</string>
        </property>
       </widget>
      </item>

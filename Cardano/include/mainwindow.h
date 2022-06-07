@@ -22,6 +22,12 @@
 #include <QMainWindow>
 #include <include/version.h>
 
+#include <QMessageBox>
+#include <QLineEdit>
+#include <QLabel>
+#include <QPushButton>
+#include <QVBoxLayout>
+
 namespace Ui {
 class MainWindow;
 }
@@ -33,6 +39,15 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+
+private slots:
+    void on_pbtnNxM_clicked();
+
+    /// set rows and columns
+    void setRows(const QString& value);
+    void setColumns(const QString& value);
+    void insertValues();
+
 
 private:
     Ui::MainWindow *ui;
