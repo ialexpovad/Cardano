@@ -23,7 +23,8 @@
 #include <include/version.h>
 #include <include/exception.h>
 #include <include/abortwindow.h>
-#include <include/matrix.h>
+//#include <include/matrix.h>
+#include <include/squarematrix.h>
 
 #include <QDebug>
 #include <QMessageBox>
@@ -73,6 +74,10 @@ private:
     void Abort(const exception& error);
 
     Matrix* operand;
+    Matrix* matrixSum;
+    Matrix* matrixFactor;
+
+
 
     double scalarOperand;
 

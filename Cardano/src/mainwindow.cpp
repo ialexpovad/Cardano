@@ -238,20 +238,29 @@ void MainWindow::on_unary_clicked()
 
 
             if(operation == "Triangularize")
-                operand = tempOperand->triangularize()
+                operand = tempOperand->triangularize();
 
             /** For Square Matrix */
             if(operation == "Identity Matrix")
             {
+              if(!dynamic_cast<SquareMatrix*>(tempOperand))
+                  throw(exception("Operation possible only with square matrices"));
+                        operand = (static_cast<SquareMatrix*>(tempOperand))->identityMatrix();
+             }
 
-            }
             if(operation == "Determinant")
             {
-
+                if(!dynamic_cast<SquareMatrix*>(tempOperand))
+                    throw(exception("Operation possible only with square matrices"));
+                scalarOperand = (static_cast<SquareMatrix*>(tempOperand))->determinant();
+                operand = 0;
             }
+
             if(operation == "Inverse Matrix")
             {
-
+                if(!dynamic_cast<SquareMatrix*>(tempOperand))
+                    throw(exception("Operation possible only with square matrices"));
+                operand = (static_cast<SquareMatrix*>(tempOperand))->inverseMatrix();
             }
 
             /** For Vectors */
