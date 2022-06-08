@@ -49,8 +49,18 @@ private slots:
     void insertValues();
 
 
+    void on_pBtnEqual_clicked();
+
+    void on_pbtnNxN_clicked();
+
+    void on_pBtn1xN_clicked();
+
+    void on_pBtnNx1_clicked();
+
 private:
     Ui::MainWindow *ui;
+    unsigned int row_num, column_num;
+
 };
 
 #endif // MAINWINDOW_H
