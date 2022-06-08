@@ -21,7 +21,11 @@
 
 #include <QMainWindow>
 #include <include/version.h>
+#include <include/exception.h>
+#include <include/abortwindow.h>
+#include <include/matrix.h>
 
+#include <QDebug>
 #include <QMessageBox>
 #include <QLineEdit>
 #include <QLabel>
@@ -48,18 +52,31 @@ private slots:
     void setColumns(const QString& value);
     void insertValues();
 
-
+    /** Set for group dim matrix (vector) */
     void on_pBtnEqual_clicked();
-
     void on_pbtnNxN_clicked();
-
     void on_pBtn1xN_clicked();
-
     void on_pBtnNx1_clicked();
+
+    /** Unary opearator */
+    void on_unary_clicked();
+
+    /** Display result in plainEdit */
+    void result();
 
 private:
     Ui::MainWindow *ui;
+    AbortWindow *m_abort;
+
     unsigned int row_num, column_num;
+    bool expectOperand;
+    void Abort(const exception& error);
+
+    Matrix* operand;
+
+    double scalarOperand;
+
+
 
 };
 

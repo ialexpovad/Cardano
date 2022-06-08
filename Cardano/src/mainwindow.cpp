@@ -21,7 +21,8 @@
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow),
+    operand(0)
 {
 
     ui->setupUi(this);
@@ -215,5 +216,79 @@ void MainWindow::on_pBtnEqual_clicked()
 
 }
 
+/**
+ * @brief MainWindow::on_unary_clicked method performs the operation of
+ * clicked on the button on the last insterted array.
+ */
+void MainWindow::on_unary_clicked()
+{
+    if(expectOperand)
+        return;
+
+
+    QPushButton *btnClicked = qobject_cast<QPushButton*>(sender());
+    QString opeartion = btnClicked->clicked();
+    if(operand)
+    {
+        Matrix *tempOperand = operand;
+        try
+        {
+            if(operation == "Transpose")
+                operand = tempOperand->transpose();
+
+
+            if(operation == "Triangularize")
+                operand = tempOperand->triangularize()
+
+            /** For Square Matrix */
+            if(operation == "Identity Matrix")
+            {
+
+            }
+            if(operation == "Determinant")
+            {
+
+            }
+            if(operation == "Inverse Matrix")
+            {
+
+            }
+
+            /** For Vectors */
+            if(operation == "Euclidean Norm")
+            {
+
+            }
+
+            delete tempOperand;
+        }
+        catch(const exception& error) { Abort(error); }
+    }
+
+    result();
+
+}
+
+void MainWindow::result()
+{
+    ui->pEditReturn->setPlainText("");
+
+}
+
+void MainWindow::Abort(const Exception &error)
+{
+    clear();
+    QMessageBox* errorWindow = new QMessageBox;
+    errorWindow->setWindowTitle("ERROR");
+    errorWindow->setText(error.getType());
+    errorWindow->show();
+
+    /** Analog Exception (aborting message)
+    Mainwindow::Abort(std::string messsage)
+    setEnabled(true);
+    m_abort->setText(message);
+    m_abort->show();
+    */
+}
 
 

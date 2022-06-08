@@ -19,13 +19,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         src/main.cpp \
-        src/mainwindow.cpp
+        src/mainwindow.cpp \
+        src/exception.cpp \
+        src/abortwindow.cpp \
+        src/matrix.cpp \
+        src/mybutton.cpp \
+        src/squarematrix.cpp
+
 HEADERS += \
         include/mainwindow.h \
-    include/version.h
+        include/version.h \
+        include/exception.h \
+        include/abortwindow.h \
+        include/matrix.h \
+        include/mybutton.h \
+        include/squarematrix.h
 
 FORMS += \
-        forms/mainwindow.ui
+        forms/mainwindow.ui \
+        forms/abortwindow.ui
 
 DISTFILES += \
         ../README.md \
