@@ -24,7 +24,11 @@ SOURCES += \
         src/abortwindow.cpp \
         src/matrix.cpp \
         src/mybutton.cpp \
-        src/squarematrix.cpp
+        src/squarematrix.cpp \
+        src/r_vector.cpp \
+        src/vector.cpp \
+        src/c_vector.cpp \
+        src/basic_operations.cpp
 
 HEADERS += \
         include/mainwindow.h \
@@ -33,7 +37,11 @@ HEADERS += \
         include/abortwindow.h \
         include/matrix.h \
         include/mybutton.h \
-        include/squarematrix.h
+        include/squarematrix.h \
+        include/r_vector.h \
+        include/vector.h \
+        include/c_vector.h \
+        include/basic_operations.h
 
 FORMS += \
         forms/mainwindow.ui \

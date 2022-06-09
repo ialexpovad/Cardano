@@ -25,7 +25,7 @@ class MyButton : public QPushButton
 { Q_OBJECT
 public:
     explicit MyButton(const QString& str, QWidget *parent = 0);
-    QSize size_hint() const override;
+    QSize sizeHint() const override;
 };
 
 #endif // MYBUTTON_H

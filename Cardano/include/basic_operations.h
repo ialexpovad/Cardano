@@ -1,8 +1,8 @@
 
 /*****************************************************************************
- * abortwindow.h
+ * basic_operations.h
  *
- * Created: 08.06.2022 2022 by Alex Povod
+ * Created: 09.06.2022 2022 by Alex Povod
  *
  * Copyright (c) 2020. All rights reserved
  *
@@ -16,30 +16,17 @@
  * contact the author of this file, or the owner of the project in which
  * this file belongs to.
  *****************************************************************************/
-#ifndef ABORTWINDOW_H
-#define ABORTWINDOW_H
+#ifndef BASIC_OPERATIONS_H
+#define BASIC_OPERATIONS_H
 
-#include <QDialog>
-#include <QLabel>
+#include "squarematrix.h"
+#include "r_vector.h"
+#include "c_vector.h"
 
-namespace Ui {
-class AbortWindow;
-}
+Matrix* operator+(const Matrix& leftOperand, const Matrix& rightOperand);
+Matrix* operator-(const Matrix& leftOperand, const Matrix& rightOperand);
+Matrix* operator*(const Matrix& matrix, double scalar);
+Matrix* operator*(double scalar, const Matrix& matrix);
+Matrix* operator*(const Matrix& leftOperand, const Matrix& rightOperand);
 
-class AbortWindow : public QDialog
-{
-    Q_OBJECT
-
-public:
-    explicit AbortWindow(QWidget *parent = 0);
-    ~AbortWindow();
-
-    void setText(std::string);
-
-private:
-    Ui::AbortWindow *ui;
-
-    std::string text;
-};
-
-#endif // ABORTWINDOW_H
+#endif // BASIC_OPERATIONS_H

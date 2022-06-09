@@ -202,7 +202,6 @@ bool Matrix::operator!=(const Matrix& temp) const
         for(unsigned int j = 0; j < columns; ++j)
             if(data[i][j] != twmp.data[i][j])
                 return true;
-
     return false;
 }
 /**

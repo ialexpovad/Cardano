@@ -33,10 +33,10 @@ private:
 public: Matrix(unsigned int rows, unsigned int columns); /// Constructor
         Matrix( const Matrix& temp);    /// Copy constructor
 
-    Matrix& operator=(const Matrix&);
-    Matrix& operator+(const Matrix&);
-    Matrix& operator-(const Matrix&);
-    Matrix& operator*(const Matrix&);
+//    Matrix& operator=(const Matrix&);
+//    Matrix& operator+(const Matrix&);
+//    Matrix& operator-(const Matrix&);
+//    Matrix& operator*(const Matrix&);
 
     bool operator==(const Matrix& m) const;
     bool operator!=(const Matrix& m) const;

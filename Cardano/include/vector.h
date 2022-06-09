@@ -1,8 +1,8 @@
 
 /*****************************************************************************
- * abortwindow.h
+ * vector.h
  *
- * Created: 08.06.2022 2022 by Alex Povod
+ * Created: 09.06.2022 2022 by Alex Povod
  *
  * Copyright (c) 2020. All rights reserved
  *
@@ -16,30 +16,17 @@
  * contact the author of this file, or the owner of the project in which
  * this file belongs to.
  *****************************************************************************/
-#ifndef ABORTWINDOW_H
-#define ABORTWINDOW_H
+#ifndef VECTOR_H
+#define VECTOR_H
 
-#include <QDialog>
-#include <QLabel>
+#include "matrix.h"
 
-namespace Ui {
-class AbortWindow;
-}
-
-class AbortWindow : public QDialog
+class Vector : public Matrix
 {
-    Q_OBJECT
-
 public:
-    explicit AbortWindow(QWidget *parent = 0);
-    ~AbortWindow();
+    Vector(unsigned int rows, unsigned int columns);
+    virtual double euclideanNorm() const = 0;
 
-    void setText(std::string);
-
-private:
-    Ui::AbortWindow *ui;
-
-    std::string text;
 };
 
-#endif // ABORTWINDOW_H
+#endif // VECTOR_H

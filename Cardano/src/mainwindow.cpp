@@ -245,7 +245,7 @@ void MainWindow::on_unary_clicked()
             {
               if(!dynamic_cast<SquareMatrix*>(tempOperand))
                   throw(exception("Operation possible only with square matrices"));
-                        operand = (static_cast<SquareMatrix*>(tempOperand))->identityMatrix();
+               operand = (static_cast<SquareMatrix*>(tempOperand))->identityMatrix();
              }
 
             if(operation == "Determinant")

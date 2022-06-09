@@ -23,7 +23,7 @@
 #include <include/version.h>
 #include <include/exception.h>
 #include <include/abortwindow.h>
-//#include <include/matrix.h>
+
 #include <include/squarematrix.h>
 
 #include <QDebug>
